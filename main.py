@@ -52,7 +52,6 @@ if __name__ == '__main__':
     pred = arima_model.forward(train, 6)
     plot_arima_prediction(train, test, pred)
 
-    print(train.shape, test.shape)
     p = observed_probability(test.values, pred)
     print(
         'Probability of observing the test set given fitted model:',
